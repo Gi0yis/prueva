@@ -20,7 +20,7 @@ El servidor recibe un JSON con los siguientes campos:
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/", methods=["GET", "POST"]) 
 def home():
     return get_secret("esto-es-un-secreto")
 
